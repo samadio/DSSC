@@ -1,0 +1,9 @@
+*.ipynb*
+
+*.aux
+
+*.log
+
+*.gz
+
+*.png
