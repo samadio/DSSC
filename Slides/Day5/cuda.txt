@@ -1,0 +1,7 @@
+"nvidia-smi" :command that is like top on GPU: shows memory, utilization, running procs, type of GPU ecc...
+There's also max power consumption. The GPUs have less memory than GPU(1/10), because memory here is just 4 Mb vs the 40 Gb of a node. What if I need ore memory on GPU?
+You can scale in number of GPUs or divide workload in a sort of pipeline.Problem is that channel between GPU and CPU is slow, so again OVERLAP DATA TRANSFER AND COMPUTATION, otherwise bottleneck.
+For example in Ulysses u have GPU with 2500 cores but a frequency of 0.71 GHz.
+Maximum number of threads per block: 1024!!!
+ECC suppport: Enabled. It means the card costs a lot more because the GPU has all the logic to handle memory errors. Specific for Scientific Computing because for gaming no one cares if a single pixel is wrong.
+
