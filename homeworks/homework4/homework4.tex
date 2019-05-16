@@ -22,7 +22,7 @@ For clarity and brevity, the results will be presented as graphs. The code and f
 \section{Coalesced Transpose}
 In this exercise I recorded times for the transposition problem in three cases: serial, CUDA coalesced (exploiting shared memory) and CUDA non coalesced. In order to record the device execution time, I exploited the function cudaDeviceSynchronize(), as suggested on CUDA documentation.
 
-In particular as requested I transposed a matrix of dimension $8192^2$ and a number of threads per block nth$\in \{64,512,1024\}$. For further sampling, I also recorded times for nth$=256$.
+In particular as requested I transposed a matrix of dimension $8192^2$ and a number of threads per block nth$\in \{64,512,1024\}$. For further testing, I also recorded times for nth$=256$.
 
 When possible, the whole matrix has been divided in square blocks of dimension nth, while for values of nth s.t. $\sqrt{(nth)}\notin \mathbb{N}$ (i.e. 512), I supposed to have an algorithm which returns a couple (a,b)$\in\mathbb{N}$ such that $ab=nth$ and $|b-a|$ is minimum. So I used a rectangular matrix block as close as possible to a square matrix.
 
