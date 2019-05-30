@@ -26,7 +26,7 @@ int main(int argc,char *argv[]){
       A[start+i*N+i]=1; //row index always between 0 and local_N, col index depends on proc
     }
     
-    if (rank!=0) //every rank except 0 send even overlapping, each has its own length local_N
+    if (rank!=0) //every rank except 0: blocking send so NO FREE. each has its own length local_N
     {
       MPI_Send(A,N*local_N,MPI_INT,0,101,MPI_COMM_WORLD);
     }

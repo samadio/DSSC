@@ -122,7 +122,7 @@ int main(){
 
   cudaMemcpy( B, dev_B, space, cudaMemcpyDeviceToHost );
 
-/*  for(i=0;i<elements;i++){
+  /*for(i=0;i<elements;i++){
      if(i%N==0 && i!=0)printf("\n");  
      printf("%d ", A[i]);
   }

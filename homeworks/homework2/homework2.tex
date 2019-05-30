@@ -20,9 +20,9 @@
 For clarity and brevity, the results will be presented mainly as graphs. The code and files containing the results are provided separately in this same folder. Only peculiar results will be analyzed singularly.
 
 \section{OpenMPI parallelization}
-In this exercise I tested the different behaviour of MPI with respect to openMP approach. In order to do so I rewrote a code for evaluating $\pi$ using a series and submitted bash scripts to Ulysses. A time measurement has been taken for each number of threads.
+In this exercise I tested the different behaviour of MPI with respect to openMP approach. In order to do so I rewrote a code for evaluating $\pi$ using a series and submitted bash scripts to Ulysses. A time measurement has been taken for each number of processes.
 
-I run bash scripts in order to test the scaling of an MPI application using 1,2,4,8,16,20 and 40 threads. For each instance of the problem I did 2 tests to ensure result stability. Noting that the single result for each number of threads presents little to no variation ($\leq 0.1\%$ at most), I used a single value between the ones generated.
+I run bash scripts in order to test the scaling of an MPI application using 1,2,4,8,16,20 and 40 processes. For each instance of the problem I did 2 tests to ensure result stability. Noting that the single result for each number of processes presents little to no variation ($\leq 0.1\%$ at most), I used a single value between the ones generated.
 
 Using N=$10^{10}$ points for evaluating $\pi$, the following scaling curve is obtained
 

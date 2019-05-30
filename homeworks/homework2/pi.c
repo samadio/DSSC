@@ -32,7 +32,7 @@ int main(int argc,char *argv[]){
   int npes = 1; // store the number of MPI processes
 
   MPI_Init( &argc, &argv );
-    double tstart=seconds();
+    double tstart=seconds(); //all procs are recording time, only one is printing
     MPI_Comm_rank( MPI_COMM_WORLD, &rank );
     MPI_Comm_size( MPI_COMM_WORLD, &npes );
     double local=0.0;
