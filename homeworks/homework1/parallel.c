@@ -14,7 +14,7 @@ int main(){
   int nthr= omp_get_num_threads();
   double tstart=omp_get_wtime();
   
-  #pragma omp parallel reduction(+:pi)
+  #pragma omp parallel //reduction(+:pi)
   {
     double local=0;
     long unsigned int i;
@@ -24,11 +24,11 @@ int main(){
       local+=f((i*h)+h/2);    
     }
     local=local*4*h;
-   // #pragma omp atomic
-   // pi+=local;
+    #pragma omp atomic
+    pi+=local;
 
    // #pragma omp critical
-     pi+=local;
+   //  pi+=local;
    }
     double duration =omp_get_wtime()-tstart;
     printf("%lf\n",duration);
